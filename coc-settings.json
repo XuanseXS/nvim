@@ -1,0 +1,9 @@
+{
+    "git.changedSign.text": "┃",
+    "git.addedSign.text": "┃",
+    "git.removedSign.text": "▁",
+    "git.topRemovedSign.text": "▔",
+    "git.changeRemovedSign.text": "≃",
+    "git.branchCharacter": "",
+    "clangd.path": "/usr/bin/clangd"
+}
