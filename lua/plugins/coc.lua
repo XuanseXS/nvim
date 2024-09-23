@@ -7,6 +7,7 @@ return {
             "coc-marketplace",
             "coc-clangd",
             "coc-sumneko-lua",
+            "coc-pairs",
             "coc-git"
         }
 
