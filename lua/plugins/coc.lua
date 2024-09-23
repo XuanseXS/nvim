@@ -6,6 +6,8 @@ return {
         vim.g.coc_global_extensions = {
             "coc-marketplace",
             "coc-clangd",
+            "coc-pairs",
+            "coc-sh",
             "coc-git"
         }
 

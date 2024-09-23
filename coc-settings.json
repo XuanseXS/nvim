@@ -1,9 +1,3 @@
 {
-    "git.changedSign.text": "┃",
-    "git.addedSign.text": "┃",
-    "git.removedSign.text": "▁",
-    "git.topRemovedSign.text": "▔",
-    "git.changeRemovedSign.text": "≃",
-    "git.branchCharacter": "",
     "clangd.path": "~/Tools/clangd_18.1.3/bin/clangd"
 }
