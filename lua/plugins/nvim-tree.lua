@@ -1,20 +1,3 @@
-local function my_on_attach(bufnr)
-    local api = require "nvim-tree.api"
-
-    local function opts(desc)
-        return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
-    end
-
-    -- default mappings
-    api.config.mappings.default_on_attach(bufnr)
-
-    -- custom mappings
-    vim.keymap.set('n', 't',    api.node.open.tab,                   opts('Open: New Tab'))
-    vim.keymap.set('n', '?',    api.tree.toggle_help,                opts('Help'))
-    vim.keymap.set('n', 'v',    api.node.open.vertical,              opts('Open: Vertical Split'))
-    vim.keymap.set('n', 'h',    api.node.open.horizontal,            opts('Open: Horizontal Split'))
-end
-
 return {
     "nvim-tree/nvim-tree.lua",
     version = "*",
@@ -22,6 +5,12 @@ return {
     event = "VeryLazy",
     dependencies = {
         "nvim-tree/nvim-web-devicons",
+    },
+    keys = {
+        { "t", function() require("nvim-tree.api").node.open.tab() end,        desc = "Open: New Tab" },
+        { "?", function() require("nvim-tree.api").tree.toggle_help() end,     desc = "Help" },
+        { "gv", function() require("nvim-tree.api").node.open.vertical() end,   desc = "Open: Vertical Split" },
+        { "gh", function() require("nvim-tree.api").node.open.horizontal() end, desc = "Open: Horizontal Split" },
     },
     config = function()
         vim.g.loaded_netrwPlugin = 1
@@ -38,7 +27,6 @@ return {
             filters = {
                 dotfiles = false,  -- 显示隐藏文件（以 . 开头的文件）
             },
-            on_attach = my_on_attach,
         })
     end,
 }
