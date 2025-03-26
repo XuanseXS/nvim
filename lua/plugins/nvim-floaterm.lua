@@ -6,6 +6,8 @@ return {
         { "<leader>tn", ":FloatermNext<CR>",  mode = "n", desc = "Next Floaterm" },
         { "<leader>tp", ":FloatermPrev<CR>",  mode = "n", desc = "Previous Floaterm" },
     },
+    opts = {
+    },
     config = function()
         -- Floaterm 配置
         vim.g.floaterm_width = 0.8 -- 宽度占比 (相对于窗口宽度)
