@@ -3,6 +3,20 @@ return {
     branch = "release",
     lazy = false,
     keys = {
+        {
+            "<c-j>",
+            "<Plug>(coc-snippets-expand-jump)",
+            mode = "i",
+            desc = "trigger completion"
+        },
+        {
+            "<c-space>",
+            "coc#refresh()",
+            mode = "i",
+            silent = true,
+            expr = true,
+            desc = "trigger completion"
+        },
         -- Tab 或 Shift-Tab 用于选择补全
         {
             "<TAB>",
@@ -57,12 +71,13 @@ return {
         { "gr", "<Plug>(coc-references)",      mode = "n", desc = "Find references" },
     },
     config = function()
-        vim.opt.updatetime = 500
+        vim.opt.updatetime = 300
+        vim.opt.backup = false
+        vim.opt.writebackup = false
         vim.g.coc_global_extensions = {
             "coc-marketplace",
             "coc-clangd",
             "coc-pairs",
-            "coc-sh",
             "coc-lua",
             "coc-git",
             "coc-jedi"
