@@ -2,9 +2,9 @@ return {
     'voldikss/vim-floaterm',
     lazy = true, -- 按需加载
     keys = {
-        { "<leader>tt", ":FloatermToggle<CR>", mode = "n", desc = "Toggle Floaterm" },
-        { "<leader>tn", ":FloatermNext<CR>",  mode = "n", desc = "Next Floaterm" },
-        { "<leader>tp", ":FloatermPrev<CR>",  mode = "n", desc = "Previous Floaterm" },
+        { "<leader>tt", "<cmd>FloatermToggle<CR>", mode = {"n", "t"}, desc = "Toggle Floaterm" },
+        { "<leader>tn", "<cmd>FloatermNext<CR>",  mode = "n", desc = "Next Floaterm" },
+        { "<leader>tp", "<cmd>FloatermPrev<CR>",  mode = "n", desc = "Previous Floaterm" },
     },
     opts = {
     },
