@@ -18,7 +18,7 @@ opt.wrap = false
 opt.cursorline = true
 
 -- 禁用鼠标
--- opt.mouse = a
+opt.mouse = "a"
 
 -- 启动系统剪切板
 opt.clipboard:append("unnamedplus")

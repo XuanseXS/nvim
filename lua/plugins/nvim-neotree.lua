@@ -23,5 +23,12 @@ return {
                 },
             },
         },
+        filesystem = {
+            filtered_items = {
+                visible = true, -- 设为 true 默认显示隐藏文件
+                hide_dotfiles = false, -- 不隐藏 . 开头的文件
+                hide_gitignored = false -- 不隐藏 git 忽略的文件（可选）
+            }
+        },
     },
 }
