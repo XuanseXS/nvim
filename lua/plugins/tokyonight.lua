@@ -4,13 +4,13 @@ return {
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
         require("tokyonight").setup({
-            transparent = true, -- 启用透明背景
+            -- transparent = true, -- 启用透明背景
             styles = {
                 sidebars = "transparent",
                 floats = "transparent",
             }
         })
         -- load the colorscheme here
-        vim.cmd([[colorscheme tokyonight-moon]])
+        vim.cmd([[colorscheme tokyonight-night]])
     end,
 }
