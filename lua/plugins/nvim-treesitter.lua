@@ -1,7 +1,7 @@
 return {
     {
         'nvim-treesitter/nvim-treesitter',
-        version= 'v0.9.3',
+        version = 'v0.9.3',
         run = ':TSUpdate',
         config = function()
             require('nvim-treesitter.configs').setup {
