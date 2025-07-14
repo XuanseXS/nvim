@@ -79,7 +79,6 @@ return {
             "coc-clangd",
             "coc-pairs",
             "coc-lua",
-            "coc-git",
             "coc-jedi"
         }
 
