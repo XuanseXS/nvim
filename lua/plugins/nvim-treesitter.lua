@@ -23,7 +23,7 @@ return {
 
     {
         'HiPhish/rainbow-delimiters.nvim',
-        version = "v0.9.0",
+        branch = 'master',
         lazy = false,
         config = function()
             require "configs.highlight"

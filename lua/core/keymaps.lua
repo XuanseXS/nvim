@@ -10,6 +10,8 @@ keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 ---------------正常模式---------------
+keymap.set("n", "<leader>p", "\"0p")
+keymap.set("n", "<leader>P", "\"0P")
 
 ---------------插件映射---------------
 keymap.set("n", "<F2>", "<cmd>Neotree toggle<CR>")          --F2打开nvimTree
