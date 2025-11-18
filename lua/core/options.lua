@@ -31,6 +31,9 @@ opt.splitbelow = true
 opt.ignorecase = true
 opt.smartcase = true
 
+-- 设置文件换行符优先级
+opt.fileformats = {"dos", "unix"}
+
 -- 外观
 vim.o.background = "dark"
 vim.o.termguicolors = true
