@@ -2,6 +2,12 @@ return {
     "neoclide/coc.nvim",
     branch = "release",
     lazy = false,
+    init = function()
+        local node = vim.fn.exepath("node")
+        if node ~= "" then
+            vim.g.coc_node_path = node
+        end
+    end,
     keys = {
         {
             "<c-j>",
@@ -66,6 +72,7 @@ return {
         },
         -- 跳转定义、类型定义、实现、引用
         { "gd", "<Plug>(coc-definition)",      mode = "n", desc = "Go to definition" },
+        { "gD", "<Plug>(coc-declaration)",     mode = "n", desc = "Go to declaration" },
         { "gy", "<Plug>(coc-type-definition)", mode = "n", desc = "Go to type definition" },
         { "gi", "<Plug>(coc-implementation)",  mode = "n", desc = "Go to implementation" },
         { "gr", "<Plug>(coc-references)",      mode = "n", desc = "Find references" },
@@ -77,9 +84,11 @@ return {
         vim.g.coc_global_extensions = {
             "coc-marketplace",
             "coc-clangd",
-            "coc-pairs",
+            "coc-git",
+            "coc-jedi",
             "coc-lua",
-            "coc-jedi"
+            "coc-pairs",
+            "coc-sh",
         }
 
         -- Autocomplete

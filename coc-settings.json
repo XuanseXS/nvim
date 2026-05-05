@@ -1,12 +1,13 @@
 {
-    "clangd.path": "/usr/bin/clangd",
+    "clangd.path": "clangd",
     "clangd.arguments": [
         "--header-insertion=never",
         "--compile-commands-dir=.",
         "--background-index",
         "--suggest-missing-includes"
     ],
-    "clangd.fallbackFlags": [
-        "-Iinclude" 
-    ]
+    "diagnostic.errorSign": "●",
+    "diagnostic.warningSign": "●",
+    "diagnostic.infoSign": "●",
+    "diagnostic.hintSign": "●",
 }

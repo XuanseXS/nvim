@@ -1,4 +1,5 @@
 local opt = vim.opt
+local fn = vim.fn
 
 -- 行号设置
 opt.relativenumber = true
@@ -17,11 +18,21 @@ opt.wrap = false
 -- 光标设置
 opt.cursorline = true
 
--- 禁用鼠标
+-- 启用鼠标
 opt.mouse = "a"
 
--- 启动系统剪切板
-opt.clipboard:append("unnamedplus")
+-- 系统存在剪切板 provider 时再启用 unnamedplus
+local has_clipboard_provider = vim.g.clipboard ~= nil
+    or vim.fn.has("win32") == 1
+    or vim.fn.has("wsl") == 1
+    or fn.executable("pbcopy") == 1
+    or fn.executable("wl-copy") == 1
+    or fn.executable("xclip") == 1
+    or fn.executable("xsel") == 1
+
+if has_clipboard_provider then
+    opt.clipboard:append("unnamedplus")
+end
 
 -- 新的视窗默认启动位置为右和下
 opt.splitright = true
@@ -32,7 +43,7 @@ opt.ignorecase = true
 opt.smartcase = true
 
 -- 设置文件换行符优先级
-opt.fileformats = {"dos", "unix"}
+opt.fileformats = {"unix", "dos"}
 
 -- 外观
 vim.o.background = "dark"
@@ -41,6 +52,3 @@ vim.o.termguicolors = true
 -- 编码格式
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = "UTF-8"
-
--- 配置nvim和windows共用一个剪切板
-vim.o['clipboard'] = 'unnamedplus'

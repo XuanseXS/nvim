@@ -3,7 +3,7 @@ return {
     lazy = false,
     version = "*",
     keys = {
-        { "<leader>tf", "<cmd>ToggleTerm direction=float <CR>", mode = "n", { desc = "浮动终端"}},
+        { "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", mode = "n", desc = "浮动终端" },
     },
     opts = {
         size = 15,
