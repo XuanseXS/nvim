@@ -70,12 +70,20 @@ return {
             silent = true,
             desc = "Format selected code",
         },
+        -- 按键绑定：重命名符号
+        {
+            "<leader>rn",
+            "<Plug>(coc-rename)",
+            mode = "n",
+            silent = true,
+            desc = "Format selected code",
+        },
         -- 跳转定义、类型定义、实现、引用
-        { "gd", "<Plug>(coc-definition)",      mode = "n", desc = "Go to definition" },
-        { "gD", "<Plug>(coc-declaration)",     mode = "n", desc = "Go to declaration" },
-        { "gy", "<Plug>(coc-type-definition)", mode = "n", desc = "Go to type definition" },
-        { "gi", "<Plug>(coc-implementation)",  mode = "n", desc = "Go to implementation" },
-        { "gr", "<Plug>(coc-references)",      mode = "n", desc = "Find references" },
+        { "gd", "<Plug>(coc-definition)",      mode = "n", silent = true, desc = "Go to definition" },
+        { "gD", "<Plug>(coc-declaration)",     mode = "n", silent = true, desc = "Go to declaration" },
+        { "gy", "<Plug>(coc-type-definition)", mode = "n", silent = true, desc = "Go to type definition" },
+        { "gi", "<Plug>(coc-implementation)",  mode = "n", silent = true, desc = "Go to implementation" },
+        { "gr", "<Plug>(coc-references)",      mode = "n", silent = true, desc = "Find references" },
     },
     config = function()
         vim.opt.updatetime = 300
@@ -84,7 +92,6 @@ return {
         vim.g.coc_global_extensions = {
             "coc-marketplace",
             "coc-clangd",
-            "coc-git",
             "coc-jedi",
             "coc-lua",
             "coc-pairs",
